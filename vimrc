@@ -36,9 +36,11 @@ if has("gui_running")
     set gfn=Consolas:h9:cANSI
     colorscheme koehler
     hi Comment gui=italic
+    hi ColorColumn guibg=#000033
 else
     colorscheme darkblue
     hi Comment ctermfg=red cterm=bold
+    hi ColorColumn ctermbg=darkblue
 endif
 
 execute pathogen#infect()
