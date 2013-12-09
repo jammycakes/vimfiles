@@ -21,10 +21,8 @@ set title
 set ttyfast
 set hidden
 set backspace=indent,eol,start
-set nu
 set modelines=0
 set encoding=utf-8
-set relativenumber
 set smartcase
 set gdefault
 set colorcolumn=100
