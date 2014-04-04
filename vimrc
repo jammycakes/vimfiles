@@ -17,7 +17,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
-set list listchars=tab:» ,trail:·
+set list listchars=tab:>-,trail:·
 set scrolloff=3
 set showcmd
 set hlsearch
