@@ -38,7 +38,7 @@ set colorcolumn=100
 set relativenumber
 
 " required for vim-javascript with vim 7.4 - see readme
-set regexpengine=1
+silent! set regexpengine=1
 
 
 inoremap <C-L> <ESC>
