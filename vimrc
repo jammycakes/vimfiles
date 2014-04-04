@@ -35,6 +35,7 @@ set encoding=utf-8
 set smartcase
 set gdefault
 set colorcolumn=100
+set relativenumber
 
 inoremap <C-L> <ESC>
 
