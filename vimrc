@@ -47,7 +47,7 @@ if has("gui_running")
     hi Comment gui=italic
     hi ColorColumn guibg=#000033
 else
-    colorscheme darkblue
+    silent! colorscheme darkblue
     hi Comment ctermfg=red cterm=bold
     hi ColorColumn ctermbg=darkblue
 endif
