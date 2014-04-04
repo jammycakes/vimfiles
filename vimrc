@@ -44,7 +44,7 @@ syntax enable
 set bg=dark
 if has("gui_running")
     set gfn=Consolas:h9:cANSI
-    colorscheme koehler
+    colorscheme murphy
     hi Comment gui=italic
     hi ColorColumn guibg=#000033
 else
