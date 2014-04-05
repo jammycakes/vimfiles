@@ -5,7 +5,21 @@ let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after', $VIM, $VIMRUNTIME,
 let s:portable = expand('<sfile>:p:h')
 
 " add the directory to 'runtimepath'
-let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
+let &runtimepath = printf('%s,%s,%s/after,%s/bundle/vundle', s:portable, &runtimepath, s:portable, s:portable)
+
+set nocompatible
+filetype off
+call vundle#rc()
+
+Plugin 'gmarik/vundle'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'PProvost/vim-ps1'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'groenewege/vim-less'
+Plugin 'pangloss/vim-javascript'
+
+filetype plugin indent on
 
 set ls=2
 set nowrap
@@ -56,7 +70,5 @@ else
     hi Comment ctermfg=red cterm=bold
     hi ColorColumn ctermbg=darkblue
 endif
-
-execute pathogen#infect()
 
 autocmd Filetype ps1 setlocal noexpandtab
