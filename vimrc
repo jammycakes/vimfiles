@@ -8,7 +8,7 @@ let &runtimepath = printf('%s,%s,%s/after,%s/bundle/vundle', s:portable, &runtim
 
 set nocompatible
 filetype off
-call vundle#rc()
+call vundle#rc(printf('%s/bundle', s:portable))
 
 " ====== Vundle-configured plugins ====== "
 
