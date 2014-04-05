@@ -1,15 +1,16 @@
-" set default 'runtimepath' (without ~/.vim folders)
+" Set up the runtime path to use this folder.
+" See http://stackoverflow.com/q/3377298
+" (Slightly modified to load vundle as well.)
+
 let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after', $VIM, $VIMRUNTIME, $VIM)
-
-" what is the name of the directory containing this file?
 let s:portable = expand('<sfile>:p:h')
-
-" add the directory to 'runtimepath'
 let &runtimepath = printf('%s,%s,%s/after,%s/bundle/vundle', s:portable, &runtimepath, s:portable, s:portable)
 
 set nocompatible
 filetype off
 call vundle#rc()
+
+" ====== Vundle-configured plugins ====== "
 
 Plugin 'gmarik/vundle'
 
@@ -18,6 +19,8 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
+
+" ====== end Vundle-configured plugins ====== "
 
 filetype plugin indent on
 
@@ -51,9 +54,9 @@ set gdefault
 set colorcolumn=100
 set relativenumber
 
-" required for vim-javascript with vim 7.4 - see readme
+" silent required for vim-javascript with unpatched vim 7.4
+" - see vim-javascript readme
 silent! set regexpengine=1
-
 
 inoremap <C-L> <ESC>
 
@@ -66,9 +69,15 @@ if has("gui_running")
     hi Comment gui=italic
     hi ColorColumn guibg=#000033
 else
+    " silent is required here for vim with msysgit, which doesn't include any
+    " colour schemes
     silent! colorscheme darkblue
     hi Comment ctermfg=red cterm=bold
     hi ColorColumn ctermbg=darkblue
 endif
 
+" PowerShell should use tabs for indentation, not spaces
+" This is for interoperability with PowerShell ISE, which uses tabs rather
+" than spaces, doesn't show them, and doesn't give you an option to configure
+" them.
 autocmd Filetype ps1 setlocal noexpandtab
