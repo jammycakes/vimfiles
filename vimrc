@@ -21,6 +21,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lsdr/monokai'
+Plugin 'kien/ctrlp.vim'
 
 " ====== end Vundle-configured plugins ====== "
 
