@@ -19,6 +19,18 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-fugitive'
+Plugin 'lsdr/monokai'
+Plugin 'tpope/vim-dispatch'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+
+" ====== C# code completion ====== "
+
+if has("python")
+    Plugin 'nosami/omnisharp'
+    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+endif
 
 " ====== end Vundle-configured plugins ====== "
 
@@ -65,7 +77,7 @@ syntax enable
 set bg=dark
 if has("gui_running")
     set gfn=Consolas:h9:cANSI
-    colorscheme murphy
+    colorscheme monokai
     hi Comment gui=italic
     hi ColorColumn guibg=#000033
 else
