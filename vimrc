@@ -19,6 +19,7 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-fugitive'
 
 " ====== end Vundle-configured plugins ====== "
 
