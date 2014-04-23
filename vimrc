@@ -21,7 +21,16 @@ Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lsdr/monokai'
+Plugin 'tpope/vim-dispatch'
+Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+
+" ====== C# code completion ====== "
+
+if has("python")
+    Plugin 'nosami/omnisharp'
+    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+endif
 
 " ====== end Vundle-configured plugins ====== "
 
