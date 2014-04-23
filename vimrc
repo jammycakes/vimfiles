@@ -27,7 +27,7 @@ Plugin 'kien/ctrlp.vim'
 
 " ====== C# code completion ====== "
 
-if has("python")
+if has("python") && has("win32")
     Plugin 'nosami/omnisharp'
     autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 endif
