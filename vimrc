@@ -60,7 +60,6 @@ set ttyfast
 set hidden
 set backspace=indent,eol,start
 set modelines=0
-set encoding=utf-8
 set smartcase
 set gdefault
 set colorcolumn=100
