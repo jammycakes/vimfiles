@@ -60,7 +60,7 @@ set title
 set ttyfast
 set hidden
 set backspace=indent,eol,start
-set modelines=0
+set modeline
 set smartcase
 set gdefault
 set colorcolumn=100
