@@ -24,6 +24,7 @@ Plugin 'lsdr/monokai'
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 " ====== C# code completion ====== "
 
