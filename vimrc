@@ -92,3 +92,7 @@ endif
 " than spaces, doesn't show them, and doesn't give you an option to configure
 " them.
 autocmd Filetype ps1 setlocal noexpandtab
+
+" .config files should use two spaces for indent, not four
+" This is to match what Visual Studio does by default
+autocmd Filetype config setlocal ts=2 sts=2 sw=2
