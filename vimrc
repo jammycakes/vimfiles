@@ -69,6 +69,9 @@ set encoding=utf8
 silent! set colorcolumn=100
 silent! set relativenumber
 
+let g:ctrlp_regexp = 1
+
+
 " silent required for vim-javascript with unpatched vim 7.4
 " - see vim-javascript readme
 silent! set regexpengine=1
