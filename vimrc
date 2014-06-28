@@ -63,8 +63,11 @@ set backspace=indent,eol,start
 set modeline
 set smartcase
 set gdefault
-set colorcolumn=100
-set relativenumber
+set encoding=utf8
+
+" silent! to comfort vim 7.2 on 1and1 server
+silent! set colorcolumn=100
+silent! set relativenumber
 
 " silent required for vim-javascript with unpatched vim 7.4
 " - see vim-javascript readme
