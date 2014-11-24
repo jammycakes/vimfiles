@@ -82,7 +82,12 @@ syntax enable
 
 set bg=dark
 if has("gui_running")
-    set gfn=Consolas:h9:cANSI
+    if has("win32")
+        set gfn=Consolas:h9:cANSI
+    endif
+    if has("gui_gtk2")
+        set gfn=Droid\ Sans\ Mono\ 8
+    endif
     colorscheme monokai
     hi Comment gui=italic
     hi ColorColumn guibg=#000033
