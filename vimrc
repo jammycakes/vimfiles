@@ -86,7 +86,7 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
     if has("gui_gtk2")
-        set gfn=Droid\ Sans\ Mono\ 8
+        set gfn=Droid\ Sans\ Mono\ 9
     endif
     colorscheme monokai
     hi Comment gui=italic
@@ -94,7 +94,7 @@ if has("gui_running")
 else
     " silent is required here for vim with msysgit, which doesn't include any
     " colour schemes
-    silent! colorscheme darkblue
+    silent! colorscheme koehler
     hi Comment ctermfg=red cterm=bold
     hi ColorColumn ctermbg=darkblue
 endif
